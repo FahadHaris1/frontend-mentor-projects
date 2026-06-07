@@ -76,7 +76,7 @@ h1:hover{
 }
 @media (max-width:600px) {
     .card{
-        width:300px;
+        width:286px;
     }
     .activity p{
         width:25%;
