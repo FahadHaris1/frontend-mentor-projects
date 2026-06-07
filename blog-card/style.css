@@ -14,7 +14,7 @@ body{
     align-items: center;
 }
 .card{
-    width:400px;
+    width:300px;
     background-color: hsl(0, 0%, 100%);
     border:1px solid black;
     border-radius: 25px;
