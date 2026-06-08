@@ -1,0 +1,191 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'Young Serif';
+    src: url("./fonts/young-serif/YoungSerif-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url("./fonts/outfit/static/Outfit-Bold.ttf");
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url("./fonts/outfit/static/Outfit-Regular.ttf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'outfit';
+    src: url("./fonts/outfit/static/Outfit-SemiBold.ttf");
+    font-weight: 600;
+}
+body{
+    background-color:hsl(30, 54%, 90%);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width:450px;
+    padding:20px;
+    border-radius: 10px;
+    background-color: white;
+}
+img{
+    width:100%;
+    border-radius: 10px;
+}
+h1{
+    font-size: 1.4rem;
+    font-family: 'Young Serif';
+    margin:10px 0px;
+    color:hsl(24, 5%, 18%);
+}
+.first-desc{
+    color:hsl(30, 10%, 34%);
+    font-size: 0.65rem;
+    margin-top:5px;
+    margin-bottom: 20px;
+    font-family: 'outfit';
+    font-weight: 400;
+}
+.pre-time-content{
+    padding:16px 15px;
+    background-color:hsl(330, 100%, 98%);
+    border-radius: 10px;
+}
+.pre-time-content p{
+    color:hsl(332, 51%, 32%);
+    font-family: 'outfit';
+    font-weight:600;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.pre-time-content li{
+    list-style: none;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: 'outfit';
+    font-weight: 400;
+    margin-left: 10px;
+    font-size: 0.7rem;
+    color:hsl(30, 10%, 34%);
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.pre-time-content span{
+    font-weight: 600;
+}
+.pre-time-content li::before{
+    content:"•";
+    color:hsl(332, 51%, 32%);
+    font-size: 1rem;
+    margin-right: 15px;
+    margin-top: 0px;
+}
+.ingredients-content{
+    margin-top: 25px;
+}
+h2{
+    color:hsl(14, 45%, 36%);
+    font-size: 1.4rem;
+    font-family: 'Young Serif';
+    margin:15px 0px;
+}
+.ingredients-content ul{
+    padding:0px 4px;
+}
+.ingredients-content li{
+    list-style-type: none;
+    margin:5px 0px;
+    color:hsl(30, 10%, 34%);
+    font-size: 0.7rem;
+    font-family: 'outfit';
+    font-weight: 400;
+}
+.ingredients-content li:before{
+    content:"•";
+    margin-right: 18px;
+    font-size: 0.8rem;
+    color: hsl(30, 10%, 34%);
+}
+.horizontal-line{
+    height: 1px;
+    width:100%;
+    background-color:hsl(30, 54%, 90%);
+    border-radius: 2px;
+    margin-top: 20px;
+}
+.ingredients-content .horizontal-line{
+    color:hsl(30, 10%, 34%);
+}
+.instructions-content ol{
+    padding:0px 16px;
+}
+.instructions-content span{
+    font-weight: 600;
+}
+.instructions-content li{
+    font-family: 'outfit';
+    color:hsl(30, 10%, 34%);
+    padding-left: 7px;
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+}
+.nutritions-desc{
+    color:hsl(30, 10%, 34%);
+    font-size: 0.7rem;
+    font-family: 'outfit';
+}
+.nutrition-card-container{
+    margin-top:20px;
+    display:flex;
+    flex-direction: column;
+
+}
+.nutrition-card{
+    display:flex;
+    flex-direction: row;
+
+}
+.nutrition-card p{
+    font-family: 'outfit';
+    font-size: 0.6rem;
+    color:hsl(30, 10%, 34%);
+    width:50%;
+}
+.cal{
+    font-weight: 700;
+}
+.nutrition-card-container .horizontal-line{
+    margin: 8px 0px;
+}
+
+
+@media (max-width:500px) {
+    body{
+        justify-content: flex-start;
+    }
+    .container{
+        width:100%;
+        padding:0px;
+        margin-top: 0px;
+        border-radius: 0px;
+    }
+    img{
+        width:100%;
+        border-radius: 0px;
+    }
+    .content{
+        padding:20px;
+    }
+}
