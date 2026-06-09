@@ -1,0 +1,146 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    background-color:hsl(0, 0%, 89%);
+
+    font-family: 'Poppins';
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding:1rem 0rem;
+}
+.main-text-container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:0.2rem;
+
+    margin-bottom: 0.5rem;
+}
+.delivery-text{
+    font-size: clamp(1rem,5vw,1.3rem);
+    font-weight:200;
+    color:hsl(234, 12%, 34%);
+}
+.technology-text{
+    color:hsl(0, 0%, 13%);
+    font-weight: 600;
+    font-size: clamp(1rem,5vw,1.28rem);
+}
+.main-desc-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.main-desc{
+    text-align: center;
+    color:hsl(212, 6%, 44%);
+    width:59%;
+    font-size: 0.6rem;
+    font-weight: 400;
+}
+.card-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:1.4rem;
+
+    padding: 20px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 0.3rem;
+    padding:28px;
+    height:190px;
+    width:290px;
+
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.073);
+}
+.supervisor.container::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height:4px;
+    width:100%;
+    background-color:hsl(180, 62%, 55%);
+}
+.team.container::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height:4px;
+    width:100%;
+    background-color:hsl(0, 78%, 62%);
+}
+.karma.container::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height:4px;
+    width:100%;
+    background-color:hsl(34, 97%, 64%);
+}
+.calculator.container::before{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    height:4px;
+    width:100%;
+    background-color:hsl(212, 86%, 64%);
+}
+.container p{
+    width:80%;
+}
+.container :nth-child(1){
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+}
+.container :nth-child(2){
+    font-size: 0.6rem;
+    color:hsl(212, 6%, 44%);
+}
+.container img{
+    margin-left: auto;
+    margin-top: 1rem;
+    width:40px;
+}
+.team-karma-container{
+    display:flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+@media (max-width:600px) {
+    
+    .card-container{
+        padding:10px;
+        flex-direction: column;
+        
+    }
+    .main-desc{
+        width:80%;
+        font-size: 0.87rem;
+    }
+}
