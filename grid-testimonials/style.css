@@ -1,0 +1,192 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding:3rem 1.3rem;
+    
+    min-height:100vh;
+    background-color: hsl(0, 0%, 81%);
+
+    font-family: 'Barlow Semi Condensed';
+}
+main{
+    width:80%;
+    
+}
+.card{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 6px;
+    padding:1.5rem;
+
+    box-shadow: 2.3rem 2.3rem 1.3rem rgba(0, 0, 0, 0.188);
+}
+.head{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:1rem;
+
+    margin-bottom: 0.8rem;
+}
+.head img{
+    width:2rem;
+    border-radius: 50%;
+}
+.card-1 img{
+    border:2px solid hsl(264, 82%, 80%);
+}
+.card-4 img{
+    border:2px solid hsl(263, 55%, 52%);
+}
+.card-1 .name,.card-2 .name,.card-4 .name{
+    color:hsl(0, 0%, 81%);
+}
+.card-1 .verified,.card-2 .verified,.card-4 .verified{
+    color:hsl(0, 0%, 81%);
+}
+.name{
+    font-size: 0.9rem;
+}
+.verified{
+    font-size: 0.7rem;
+}
+h1{
+    margin-bottom: 1rem;
+}
+
+.card-1 h1,.card-2 h1{
+    color:white;
+    font-weight: 500;
+}
+.card-1{
+    background-image:url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position:top right;
+    background-size: 5.2rem;
+    background-position: 90% 0%;
+    background-color:hsl(263, 55%, 52%);
+}
+.card-1 h1{
+    font-size: 1.04rem;
+}
+.card-1 .desc{
+    font-weight: normal;
+    color:hsl(214, 17%, 92%);
+    font-size: 0.7rem;
+    line-height: 1rem;
+}
+.card-2 h1{
+    font-size: 1rem;
+}
+.card-2 .desc{
+    font-size: 0.77rem;
+    color:hsl(214, 17%, 92%);
+    line-height: 1rem;
+}
+.card-3{
+    background-color: hsl(214, 17%, 92%);
+}
+.card-3 .name{
+    color:hsl(217, 19%, 35%);
+    font-weight: 500;
+}
+.card-3 .verified{
+    color:hsl(217, 19%, 35%)
+}
+.card-3 h1{
+    font-size: 1.2rem;
+    color:hsl(219, 29%, 14%);
+    font-weight: 500;
+}
+.card-3 .desc{
+    font-size: 0.76rem;
+    line-height: 1rem;
+}
+.card-4{
+    background-color:hsl(0, 0%, 7%);
+}
+.card-4 h1{
+    color:hsl(217, 23%, 71%);
+    font-size: 1rem;
+    font-weight: 500;
+}
+.card-4 .desc{
+    font-size: 0.7rem;
+    color:hsl(217, 23%, 71%);
+    line-height: 1rem;
+}
+.card-5{
+    background-color: hsl(214, 17%, 92%);
+}
+.card-5 h1{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.card-5 .desc{
+    color:hsl(0, 0%, 30%);
+    font-weight: 400;
+    line-height: 1rem;
+    font-size: 0.74rem;
+}
+
+.container{
+    max-width: 60rem;
+    display:grid;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "card1 card1 card2 card5"
+    "card3 card4 card4 card5";
+    gap:1.5rem;
+
+}
+.card-2{
+    background-color: hsl(217, 19%, 35%);
+}
+@media (max-width:38.5rem) {
+    body{
+        padding:3rem 1.3rem;
+        padding-bottom: 20rem;
+    }
+    .container{
+        grid-template-columns: 1fr;
+        
+        grid-template-areas: 
+        "card1"
+        "card2"
+        "card3"
+        "card4"
+        "card5";
+    }
+    .card-1{
+        background-image:none;
+        background-color:hsl(263, 55%, 52%);
+    }
+    .card-1 h1{
+        font-size: 1.3rem;
+    }
+    .card-1 .desc{
+        font-size:0.8rem;
+    }
+    .card-4 h1{
+        font-size: 1.36rem;
+    }
+    .card-4 .desc{
+        font-size: 0.8rem;
+    }
+    .card-5 h1{
+        font-size: 1.4rem;
+    }
+    .card-5 .desc{
+        font-size: 0.84rem;
+    }
+}
