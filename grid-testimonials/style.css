@@ -155,7 +155,7 @@ h1{
 @media (max-width:38.5rem) {
     body{
         padding:3rem 1.3rem;
-        padding-bottom: 20rem;
+        
     }
     .container{
         grid-template-columns: 1fr;
