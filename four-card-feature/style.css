@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 body{
+    min-height: 100vh;
     display:flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding:20px;
-    background-color:hsl(0, 0%, 89%);
+    background-color:hsl(0, 0%, 97%);
 
     font-family: 'Poppins';
 }
