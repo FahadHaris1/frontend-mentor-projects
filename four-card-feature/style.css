@@ -132,6 +132,13 @@ header{
     flex-direction: column;
     gap: 1.4rem;
 }
+footer{
+    font-size:0.5rem;
+    color:hsl(212, 6%, 44%);
+}
+footer a{
+    color:hsl(180, 62%, 55%);
+}
 @media (max-width:600px) {
     
     .card-container{
