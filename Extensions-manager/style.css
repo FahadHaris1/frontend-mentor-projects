@@ -1,0 +1,289 @@
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto sans';
+}
+body{
+    background: linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+}
+button{
+    cursor:pointer;
+}
+main{
+    min-height: 100vh;
+
+    display:flex;
+    flex-direction: column;
+
+    padding:2rem 7.7rem;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+}
+.head-sec{
+    height:4rem;
+    width:100%;
+    padding:1rem;
+    border-radius: 0.8rem;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    margin-bottom: 1rem;
+
+    box-shadow: 0rem 0.2rem hsl(0, 0%, 87%);
+}
+.head-sec > svg{
+    width:9.2rem;
+}
+.head-sec button{
+    text-align: center;
+    border:none;
+    background-color: hsl(0, 0%, 93%);
+    padding: 0.6rem 1.3rem;
+    border-radius: 0.6rem;
+
+    transition: background-color 0.2s ease;
+}
+.head-sec button img{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.head-sec button:hover{
+    background-color: hsl(0, 0%, 78%);
+}
+.extension-list-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1.3rem;
+}
+.extension-list-container h1{
+    font-size:1.7rem;
+}
+.status{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    gap:0.8rem;
+}
+.status button{
+    border:none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5rem;
+    background-color: white;
+    color:hsl(227, 75%, 14%);
+    box-shadow: 0rem 0rem 0.1rem rgb(137, 137, 137);
+}
+.status button:hover{
+    background-color: hsl(0, 0%, 97%);
+    color:hsl(225, 4%, 40%);
+}
+.status button.active:hover{
+    background-color: hsl(3, 77%, 62%);
+}
+.status button.active{
+    background-color: hsl(3, 71%, 56%);
+    color:white;
+}
+.extensions-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:1rem;
+    margin-top: 1.5rem;
+}
+.card{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    height:180px;
+    box-shadow:0 0 0.2rem rgb(211,211,211);
+    gap:2rem;
+    background-color: white;
+    padding:1rem;
+    border-radius: 0.67rem;
+    box-shadow: 0rem 0rem 0.2rem rgb(211, 211, 211);
+}
+.extension-image-p-container{
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap:1rem;
+}
+.extension-image-p-container.markup .tool-desc{
+    font-size: 0.7rem;
+}
+.extension-image-p-container img{
+    width: 3.3rem;
+}
+.tool-name{
+    font-weight: bold;
+    color:hsl(226, 25%, 17%);
+}
+.tool-desc{
+    color:hsl(226, 11%, 37%);
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+.extension-butt-container{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.remove-btn{
+    height:1.7rem;
+    width:3.7rem;
+    text-align: center;
+    border-radius: 2rem;
+    font-size: 0.68rem;
+    border: none;
+    color:hsl(226, 25%, 17%);
+    background-color: white;
+
+    transition:background-color 0.2s ease;
+
+    box-shadow: 0rem 0rem 0.2rem rgb(149, 149, 149);
+}
+.remove-btn:hover{
+    background-color: hsl(3, 71%, 56%);
+    color:white;
+}
+
+.toggle{
+    display: block;
+    position:relative;
+    cursor:pointer;
+    height:0.95rem;
+    width:2rem;
+}
+.toggle input{
+    opacity:0;
+    width:0;
+    height:0;
+}
+.slider{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    cursor:pointer;
+    background-color: hsl(0, 0%, 82%);
+    border-radius: 2rem;
+
+    transition:background-color 0.3s ease;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    top:0.1rem;
+    left:0.06rem;
+    width:0.78rem;
+    height:0.77rem;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0rem 0rem 0.3rem rgb(189, 189, 189);
+
+    transition: all 0.3s ease;
+}
+input:checked + .slider{
+    background-color: hsl(3, 71%, 56%);
+}
+input:checked + .slider::before{
+    transform:translateX(1rem);
+}
+input:checked + .slider:hover{
+    background-color: hsl(0, 76%, 66%);
+}
+
+
+/* - - - - - -Dark mode - - - - - - - - -  */
+.dark-mode {
+    background: linear-gradient(180deg, #040918 0%, #091540 100%);
+}
+.dark-mode .head-sec {
+    background-color: hsl(226, 25%, 17%);
+    box-shadow: none;
+}
+.dark-mode .head-sec button {
+    background-color: hsl(225, 23%, 24%);
+}
+.dark-mode .head-sec button:hover {
+    background-color: hsl(225, 33%, 34%);
+}
+.dark-mode .extension-list-container h1{
+    color:white;
+}
+.dark-mode .status button{
+    color:white;
+    background-color: hsl(225, 23%, 24%);
+    border-top:1px solid hsla(0, 0%, 45%, 0.576);
+    border-bottom: 1px solid hsla(0, 0%, 45%, 0.576);
+}
+.dark-mode .status button:hover{
+    background-color: hsl(225, 20%, 31%);
+}
+.dark-mode .status button.active{
+    color:#091540;
+    background-color: hsl(3, 71%, 56%);
+}
+.dark-mode .status button.active:hover{
+    color:#091540;
+    background-color: hsl(3, 84%, 64%);
+}
+.dark-mode .card{
+    background-color: hsl(226, 25%, 17%);
+    box-shadow: none;
+    border-top:1px solid hsla(0, 0%, 45%, 0.576);
+    border-bottom: 1px solid hsla(0, 0%, 45%, 0.576);
+}
+.dark-mode .tool-name{
+    color:white;
+}
+.dark-mode .tool-desc{
+    color:hsl(230, 3%, 63%);
+}
+.dark-mode .remove-btn{
+    background-color: hsl(226, 25%, 17%);
+    color:rgb(224, 224, 224);
+    box-shadow: 0rem 0rem 0.1rem rgb(149, 149, 149);
+}
+.dark-mode .remove-btn:hover{
+    background-color: hsl(0, 76%, 66%);
+    color:#091540;
+}
+.dark-mode .slider{
+    background-color: hsl(226, 11%, 37%);
+}
+footer{
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+footer a{
+    color:#091540;
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width:36.5rem) {
+    main{
+        padding:1.5rem;
+    }
+    .extension-list-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:1rem;
+    }
+    .extensions-container{
+        grid-template-columns: 1fr;
+    }
+}
