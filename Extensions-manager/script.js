@@ -1,5 +1,5 @@
 
-const allExtensions =JSON.parse(localStorage.getItem("cart")) ||[
+const allExtensions =JSON.parse(localStorage.getItem("cartExten")) ||[
     {
         "logo": "images/logo-devlens.svg",
         "name": "DevLens",
@@ -126,7 +126,7 @@ function listeners(){
                 }
             });
 
-            localStorage.setItem("cart",JSON.stringify(allExtensions));
+            localStorage.setItem("cartExten",JSON.stringify(allExtensions));
             
         });
     });
@@ -139,7 +139,7 @@ function listeners(){
                 return item.name === name;
             });
             allExtensions.splice(index,1);
-            localStorage.setItem("cart",JSON.stringify(allExtensions));
+            localStorage.setItem("cartExten",JSON.stringify(allExtensions));
             renderCart(allExtensions);
 
         });
